@@ -5,46 +5,53 @@
 
 /* ==================== common css ======================= */
 
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-:root{
+
+:root {
     --main-heading-color: #008bcb;
     --main-text-color: #7a7a7a;
 }
-html{
+
+html {
     font-size: 10px;
 }
-body{
+
+body {
     background: #fff;
     font-family: 'Roboto', sans-serif;
     /* font-family: 'Quicksand', sans-serif; */
     color: var(--main-text-color);
-    /* transition: all 1s ease-in-out; */
+
 }
-.container-flued{
-    max-width:100%;
+
+.container-flued {
+    max-width: 100%;
     /* background-color: #008bcb; */
     margin-left: auto !important;
     margin-right: auto !important;
     /* position: relative; */
 }
-.container{
+
+.container {
     max-width: 65%;
     margin-left: auto !important;
     margin-right: auto !important;
     /* position: relative; */
     /* background: #fff; */
 }
-.divider{
+
+.divider {
     width: 100%;
     height: 1px;
     margin: 1rem 0;
     background-color: rgba(122, 122, 122, 0.2);
 }
-.button{
+
+.button {
     padding: 1rem 5%;
     font-size: 1.4rem;
     text-decoration: none;
@@ -52,95 +59,131 @@ body{
     color: #fff;
     text-align: center;
 }
+.button img{
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
 
 /* ============================ Banner section ===================== */
-.container-flued .banner{
+.container-flued .banner {
     position: relative;
 }
-.container-flued .banner img{
+
+.container-flued .banner img {
     max-width: 100%;
     height: auto;
     display: block;
     /* position: relative; */
 }
+
 /* -------------------- banner caption ------------------ */
-.banner .banner-caption{
+.banner .banner-caption {
     position: absolute;
     top: 55%;
     left: 29%;
     align-items: center;
+    transition: all 1s ease-in-out;
     text-align: center;
 }
-.banner .banner-caption p{
+
+.banner .banner-caption p {
     color: #fff;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 2.4rem;
     text-align: center;
     display: inline-block;
-    transition: all 2s ease-in-out;
-    animation: banner-caption 2s linear;
+    animation: banner-caption 2s normal;
     /* animation-fill-mode: backwards; */
 }
-.banner .banner-caption p a{
+
+.banner .banner-caption p a {
     padding: 1rem 2.4rem;
     background-color: var(--main-heading-color);
     color: #fff;
-    font-size: 1rem;
     text-decoration: none;
 }
 
 /* *********************** Banner Animetion ************************* */
-@keyframes banner-caption{
-    from{
-        transform: translateX(-100rem);
+@keyframes banner-caption {
+
+    from {
+        transform: translateY(200px);
+        opacity: 0.1;
     }
-    to{
-        transform: translateX(0)
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
     }
+
+    /* 0%{transform:translateY(500px); opacity: 0.1;}
+    10%{transform:translateY(450px); opacity: 0.1;}
+    20%{transform:translateY(400px); opacity: 0.2;}
+    30%{transform:translateY(350px); opacity: 0.3;}
+    40%{transform:translateY(300px); opacity: 0.4;}
+    50%{transform:translateY(250px); opacity: 0.5;}
+    60%{transform:translateY(200px); opacity: 0.6;}
+    70%{transform:translateY(150px); opacity: 0.7;}
+    80%{transform:translateY(100px); opacity: 0.8;}
+    90%{transform:translateY(50px); opacity: 0.9;}
+    100%{transform:translateY(0px); opacity: 1;} */
+    /* 30%,40%,50%{transform:translateY(500px); opacity: 0.5;}
+    60%,70%,80%{transform:translateY(500px); opacity: 0.7;}
+    90%,100%{transform:translateY(100px); opacity: 1;} */
 }
 
 /* =========================================== Header Section start============================ */
-.banner header{
-    width: 100%;
+header {
     position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    left: 0;
+    top: 0;
 }
-header .container nav.navbar{
+
+header .container nav.navbar {
     display: flex;
     justify-content: center;
-    align-items: center ;
+    align-items: center;
 }
-header .container nav.navbar div.nav-left{
+
+header .container nav.navbar div.nav-left {
     width: 20%;
     padding: 1rem 0;
 }
-header .container nav.navbar div.nav-center{
+
+header .container nav.navbar div.nav-center {
     width: 60%;
     padding: 1rem 0;
 }
-header .container nav.navbar div.nav-right{
+
+header .container nav.navbar div.nav-right {
     width: 20%;
     padding: 1rem 0;
     text-align: right;
 }
-.container nav.navbar .nav-center{
+
+.container nav.navbar .nav-center {
     text-align: center;
     font-size: 1rem;
 }
-.nav-center ul li a,.nav-right ul li a{
+
+.nav-center ul li a,
+.nav-right ul li a {
     color: #fff;
     font-size: 1.2rem;
     font-family: inherit;
     text-decoration: none;
 }
-nav.navbar .nav-center ul li{
+
+nav.navbar .nav-center ul li {
     display: inline-block;
     padding: 0 1.6rem;
 }
-nav.navbar .nav-right ul li{
+
+nav.navbar .nav-right ul li {
     display: inline-block;
     padding: 0px 0.4rem;
 }
@@ -149,248 +192,273 @@ nav.navbar .nav-right ul li{
 
 
 /* ========================================================= main section start =========================== */
- .segment{
-     width: 100%;
-     border-top: 1px solid rgba(122, 122, 122,0.3); 
- }
- /* .def-segment{
-     position: relative;
-     top: -3rem;
- } */
- .strip{
-     width: 100%;
-     margin-top: 4rem;
-     height: 3.5rem;
-     background-color: rgba(122, 122, 122, 0.5);
- }
- .mid-section .items{
-     position: relative;
-     overflow: hidden;
-     transition: all 1s ease-in-out;
-     transform: skewX(20deg);
-     animation: items 1s linear;
+.segment {
+    width: 100%;
+    border-top: 1px solid rgba(122, 122, 122, 0.3);
+}
+
+
+.mid-section .items {
+    display: flex;
+    transition: all 1s ease-in-out;
+    animation: items 1s linear;
+}
+
+.items .image, .items .item-caption{
+    flex: 1;
+}
+
+@keyframes items {
+    from {
+        transform: scale(0);
     }
-.mid-section .items:hover{
-    transform: skewX(0deg);
- }
- @keyframes items{
-     from{
-         transform: scale(0);
-     }
-     to{
-         transform: scale(1);
-     }
- }
- .mid-section .first-item{
-     top: -7rem;
- }
- .items div{
-     float: left;
-     width: 50%;
- }
- .items div.image img{
-     max-width: 100%;
-     height: auto;
-     display: block;
 
- }
- .items div.item-caption{
-    padding: 18rem 0 0 5rem;
- }
- p.heading{
-     font-size: 3.1rem;
-     color: var(--main-heading-color);
- }
- p.text{
-     font-size: 1.2rem;
-     margin-top: 1rem;
-     color: var(--main-text-color);
- }
+    to {
+        transform: scale(1);
+    }
+}
+
+.items div.image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* transform: skewX(20deg); */
+}
+
+.items div.item-caption {
+    /* padding: 18rem 0 0 5rem; */
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+p.heading {
+    font-size: 3.1rem;
+    color: var(--main-heading-color);
+}
+p.text {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: var(--main-text-color);
+}
 
 
- /* ======================= Mobile And Desktop section ================= */
+/* ======================= Mobile And Desktop section ================= */
 
- .segment .mobile-desktop-section{
-     padding: 8rem 0;
-     text-align: center;
-     animation: mobile 2s linear;
- }
- @keyframes mobile{
-     from{
-         transform: scale(0);
-     }
-     to{
-         transform: scale(1);
-     }
- }
- .segment .mobile-desktop-section img{
-     /* max-width: 100%; */
-     width: 40rem;
+.segment .mobile-desktop-section {
+    padding: 8rem 0;
+    text-align: center;
+    animation: mobile 2s linear;
+}
+
+@keyframes mobile {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.segment .mobile-desktop-section img {
+    /* max-width: 100%; */
+    width: 40rem;
     margin-left: auto;
     margin-right: auto;
     margin-top: 6rem;
-     height: auto;
-     display: block;
- }
+    height: auto;
+    display: block;
+}
 
 
- /* =========================== Smarter way seection ================ */
+/* =========================== Smarter way seection ================ */
 
- .segment .smarter-way-section{
-     padding: 5rem 0 2rem 0;
- }
- .segment .smarter-way-section p.heading{
-     text-align: center;
- }
-.smarter-way-section .smarter-ways{
+.segment .smarter-way-section {
+    padding: 5rem 0 2rem 0;
+}
+
+.segment .smarter-way-section p.heading {
+    text-align: center;
+}
+
+.smarter-way-section .smarter-ways {
     /* margin-top: 4rem; */
     overflow: hidden;
     animation: smarter-way 2s linear;
 }
-@keyframes smarter-way{
-    0%{transform:scale(1)}
-    10%,20%{transform:scale(0.5)}
-    30%,50%,70%,90%{transform:scale(1)}
-    40%,60%,80%{transform:scale(0.5)}
-    100%{transform:scale(1)}
+
+@keyframes smarter-way {
+    0% {
+        transform: scale(1)
+    }
+
+    10%,
+    20% {
+        transform: scale(0.5)
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: scale(1)
+    }
+
+    40%,
+    60%,
+    80% {
+        transform: scale(0.5)
+    }
+
+    100% {
+        transform: scale(1)
+    }
 }
-.smarter-way-section .smarter-ways div.way{
+
+.smarter-way-section .smarter-ways div.way {
     width: 33.3%;
     float: left;
 }
-.smarter-ways .way .way-detail{
+
+.smarter-ways .way .way-detail {
     overflow: hidden;
     margin: 4rem 0;
 }
-.smarter-ways .way .way-detail .icon{
+
+.smarter-ways .way .way-detail .icon {
     width: 15%;
     height: auto;
 }
-.smarter-ways .way .way-detail .icon-caption{
+
+.smarter-ways .way .way-detail .icon-caption {
     width: 85%;
     padding-left: 1rem;
 }
-.smarter-ways .way .way-detail div{
+
+.smarter-ways .way .way-detail div {
     float: left;
     /* display: inline-block; */
 }
-.smarter-ways .way .way-detail .icon img{
+
+.smarter-ways .way .way-detail .icon img {
     width: 4.5rem;
     height: auto;
     display: block;
 }
-.way .way-detail .icon-caption .icon-heading{
+
+.way .way-detail .icon-caption .icon-heading {
     font-size: 1.4rem;
 }
 
 
 /* ====================================== Plans Sections ==================== */
-.plans-section{
-    background-color: rgba(122, 122, 122,0.2);
-    padding: 5rem 0; 
+.plans-section {
+    background-color: rgba(122, 122, 122, 0.2);
+    padding: 5rem 0;
 }
-.plans .heading{
+
+.plans .heading {
     text-align: center;
 }
-.our-plans{
-    overflow: hidden;
+
+.our-plans {
     margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
 }
-.our-plans .plan{
-    float: left;
+
+.our-plans .plan {
+    display: flex;
+    flex-direction: column;
     width: 18.8%;
     padding: 1rem;
-    border: 1px solid rgba(122, 122, 122,0.5);
-    border-bottom: 0px;
-    margin-right: 1rem;
-    height: 45rem;
+    border: 1px solid rgba(122, 122, 122, 0.5);
+    /* height: 45rem; */
     background-color: #fff;
+    justify-content: inherit;
+    
 }
-.button-div{
-    overflow: hidden;
-    margin-top: 0;
+.plan div{
+    display: flex;
+    flex-direction: column;
 }
-.button-div .plan-button{
-    float: left;
-    width: 18.8%;
-    padding: 1rem;
-    border: 1px solid rgba(122, 122, 122,0.5);
-    border-top: 0px; 
-    margin-right: 1rem;
-    /* height: 50rem; */
-    background-color: #fff;
-}
-.plan-button p{
-    margin-bottom: 1rem;
-}
-.our-plans div.tab-4{
-    margin: 0;
-}
-.plan p.heading{
+.plan p.heading {
     font-size: 2.8rem;
     text-align: center;
     padding: 1.5rem 0;
-    /* font-weight: bold; */
+    color: var(--main-heading-color);
 }
-.plan .plan-charge{
+
+.plan p{
     text-align: center;
     font-size: 1.2rem;
     color: rgba(122, 122, 122, 0.8);
 }
-.plan p span{
+
+.plan p span {
     color: var(--main-heading-color);
 }
 
-p.signup{     
-    text-align: center;
-    /* margin-top: 202%; */
+.plan a.button{
+
 }
-p.wobot-store-button{
-    text-align: center;
-    /* margin-top: 88%; */
-}
-p.wobot-store-button2{
-    text-align: center;
-    /* margin-top: 64%; */
-}
+
 
 /* ========================= footer section =====================*/
 
-.footer{
+.footer {
     overflow: hidden;
     margin: 4rem 0;
 }
-.footer-section-first{
+
+.footer-section-first {
     width: 30%;
     float: left;
 }
-.footer-section-first img{
+
+.footer-section-first img {
     max-width: 100%;
     height: auto;
     display: block;
 }
-.footer-section-first p{
+
+.footer-section-first p {
     font-size: 1.2rem;
     margin-top: 3rem;
 }
-.footer-section{
+
+.footer-section {
     float: left;
     width: 23.3%;
     padding-left: 2.5rem;
 }
 
-.footer-section p.heading{
+.footer-section p.heading {
     font-size: 2rem;
 }
-.footer-section ul{
+
+.footer-section ul {
     margin-top: 1rem;
 }
-.footer-section ul li{
+
+.footer-section ul li {
     list-style: none;
     font-size: 1.2rem;
     padding: 0.6rem 0;
 }
-.container.copyright{
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
+.footer-section ul li a:hover {
+    color: var(--main-heading-color);
+}
+
+.container.copyright {
+
     margin-bottom: 5rem;
     color: rgba(122, 122, 122, 0.5);
 }
@@ -398,15 +466,72 @@ p.wobot-store-button2{
 
 
 /* ======================= Media Queries ==================== */
-@media only screen and (max-width: 1140px) {
-    /* For mobile phones: */
-    html {
-      font-size: 8px;
-    }
-  }
-  @media only screen and (max-width: 786px) {
-    /* For mobile phones: */
-    html {
-      font-size: 6px;
-    }
-  }
+
+
+/* ============================================= Signup Page Css ============================== */
+
+.signup-page {
+    border: 1px solid rgba(231, 230, 230, .5);
+    border-radius: .5rem;
+    margin-top: 4rem;
+    padding: 1.5rem;
+    background-color: #fff;
+}
+
+.signup-page h1,
+h5 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.signup-page h1 {
+    color: var(--main-heading-color);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.two .fields {
+    width: 49%;
+}
+
+.three .fields {
+    width: 32.3%;
+}
+
+.four .fields {
+    width: 24%;
+}
+
+.fields .form-control,
+.form-controls .form-control {
+    width: 100%;
+    padding: 1rem .5rem;
+    border-radius: .5rem;
+    border: 1px solid #dcdcdc;
+    color: #7a7a7a;
+}
+
+.fields label,
+.form-group label {
+    font-size: 1.4rem;
+    display: block;
+}
+
+.form-group button {
+    width: 20%;
+    align-self: center;
+    margin: 2rem 0;
+}

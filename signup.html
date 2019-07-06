@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>wobot | Registration</title>
+
+    <!-- =========================== CSS Files =========================== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+    body{
+        background-image: radial-gradient( circle 1002px at -0.1% 47%,  rgba(53,92,125,1) 0%, rgba(108,91,123,1) 51.2%, rgba(192,108,132,1) 100.2% );
+    }
+    </style>
+</head>
+<body>
+    <div class="container signup-page">
+        <h5><a href="index.html"> <img src="assets/image/footer-logo.png" alt="Wobot Icon"></a></h5>
+        <h1>User Registration</h1>
+        <div class="divider"></div>
+
+        <form action="#" method="post" id="regform" onsubmit="return regform()">
+            <div class="form-group">
+                <div class="form-controls three">
+                   <div class="fields">
+                        <label for="fname">First Name</label>
+                        <input type="text" class="form-control" id="fname" name = "fname">
+                        <br>
+                        <span id="errfname"></span>
+                   </div>
+                   <div class="fields">
+                        <label for="mname">Mid Name</label>
+                        <input type="text" class="form-control" id="mname" name = "mname">
+                        <br><span id="errmname"></span>
+                   </div>
+                   <div class="fields">
+                        <label for="lname">Last Name</label>
+                        <input type="text" class="form-control" id="lname" name = "lname">
+                        <br><span id="errlname"></span>
+                    </div>
+                </div>
+                <div class="form-controls two">
+                    <div class="fields">
+                        <label for="gender">Gender</label>
+                       <select name="gender" id="gender" class="form-control">
+                           <option value="0" selected disabled>Select gender</option>
+                           <option value="male">Male</option>
+                           <option value="female">Female</option>
+                       </select>
+                       <br><span id="errgender"></span>
+                    </div>
+                    <div class="fields">
+                        <label for="dob">Date of birth</label>
+                        <input type="date" name="dob" id="dob" class="form-control">
+                        <br><span id="errdob"></span>
+                    </div>
+                </div>
+                <div class="form-controls two">
+                    <div class="fields">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control">
+                        <br><span id="erremail"></span>
+                    </div>
+                    <div class="fields">
+                        <label for="phnumber">Phone Number</label>
+                        <input type="number" name="phnumber" id="phnumber" class="form-control" maxlength="10" minlength="10">
+                        <br><span id="errphnumber"></span>
+                    </div>
+                </div>
+                <div class="form-controls two">
+                    <div class="fields">
+                        <label for="fatname">Father Name</label>
+                        <input type="text" name="fatname" id="fatname" class="form-control">
+                        <br><span id="errfatname"></span>
+                    </div>
+                    <div class="fields">
+                        <label for="motname">Mother Name</label>
+                        <input type="text" name="motname" id="motname" class="form-control">
+                        <br><span id="errmotname"></span>
+                    </div>
+                </div>
+                <div class="form-controls two">
+                    <div class="fields">
+                        <label for="state">State</label>
+                        <select name="state" id="state" class="form-control">
+                            <option value="0" selected disabled>Select State</option>
+                            <option value="male">U.P.</option>
+                            <option value="female">Delhi</option>
+                        </select>
+                        <br><span id="errstate"></span>
+                    </div>
+                    <div class="fields">
+                        <label for="city">City</label>
+                        <select name="city" id="city" class="form-control">
+                            <option value="0" selected disabled>Select City</option>
+                            <option value="noida">Noida</option>
+                            <option value="Greater Noida">Greater Noida</option>
+                        </select>
+                        <br><span id="errcity"></span>
+                    </div>
+                </div>
+                <!-- <div class="form-controls">
+                    <label for="image">Profile Image</label>
+                    <input type="file" name="image" id="image">
+                </div> -->
+                <button type="submit" class="button" onsubmit="register()">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- ================ JS Files ============== -->
+    <script src="assets/js/signup.js"></script>
+</body>
+</html>

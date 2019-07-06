@@ -1,0 +1,51 @@
+@media only screen and (max-width: 1140px) {
+
+    /* For mobile phones: */
+    .container{
+        max-width: 80%;
+        transition: all 1s ease-in-out;
+    }
+    .banner .banner-caption p {
+        font-size: 2rem;
+        transition: all 1s ease-in-out;
+    }
+    p.heading {
+        transition: all 1s ease-in-out;
+        font-size: 2.5rem;
+    }
+    .plan p.heading {
+        font-size: 2rem;
+    }
+    .plan .button{
+        font-size: 1.2rem;
+    }
+    .button img{
+        font-size: 18%;
+    }
+}
+
+@media only screen and (max-width: 786px) {
+
+    /* For mobile phones: */
+    .container{
+        max-width: 90%;
+        transition: all 1s ease-in-out;
+    }
+    .banner .banner-caption p {
+        font-size: 1.4rem;
+        transition: all 1s ease-in-out;
+    }
+    p.heading {
+        transition: all 1s ease-in-out;
+        font-size: 1.8rem;
+    }
+    .plan p.heading {
+        font-size: 1.5rem;
+    }
+    .plan .button{
+        font-size: 1rem;
+    }
+    .button img{
+        font-size: 14%;
+    }
+}
