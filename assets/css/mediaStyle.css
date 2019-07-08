@@ -20,7 +20,7 @@
         font-size: 1.2rem;
     }
     .button img{
-        font-size: 18%;
+        width: 20%;
     }
 }
 
@@ -46,6 +46,6 @@
         font-size: 1rem;
     }
     .button img{
-        font-size: 14%;
+        width: 16%;
     }
 }
